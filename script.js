@@ -105,7 +105,6 @@ let ourPizzas = {
     }
 };
 
-
 function createPizzaCategory(pizzaCategory,pizzas){
 
     let pizzaMenu = document.querySelector(".pizza-menu");
@@ -144,21 +143,21 @@ function createPizzaCategory(pizzaCategory,pizzas){
     }
 }
 
+function createPizzaMenu(){
+    
+    let generalContainer = document.querySelector(".pizza-menu")
+    generalContainer.remove()
+    bevvyButton.classList.remove("pressed")
+    puddingButton.classList.remove("pressed")
+    generalContainer = document.createElement("div");
+    generalContainer.classList.add("pizza-menu");
+    document.body.appendChild(generalContainer);
 
-let generalContainer = document.createElement("div");
-generalContainer.classList.add("pizza-menu");
-document.body.appendChild(generalContainer);
+    pizzaButton.classList.add("pressed")
 
-createPizzaCategory("Pizze Classiche",classicPizzas)
-createPizzaCategory("Pizze della casa",ourPizzas)
-
-
-
-// beverages
-let softDrinks = ['Acqua Naturale', 'Acqua Frizzante', 'Coca-cola','Tè alla pesca'];
-let beers = ['Heineken','Ichnusa Radler'];
-let heavyDrinks = ['Nonno Elogu', 'Limoncello','Crema di limone','Mirto'];
-let coffee = ['Espresso','Ginseng','Decaffeinato'];
+    createPizzaCategory("Pizze Classiche",classicPizzas)
+    createPizzaCategory("Pizze della casa",ourPizzas)
+}
 
 function createArrayCategory(categoryName,array){
 
@@ -184,11 +183,73 @@ function createArrayCategory(categoryName,array){
     }
 }
 
-createArrayCategory("Acqua e bevande",softDrinks);
-createArrayCategory("Birre",beers);
-createArrayCategory("Amari",heavyDrinks);
-createArrayCategory("Caffetteria",coffee);
+
+function createBevvyMenu(){
+    
+    let generalContainer = document.querySelector(".pizza-menu")
+    generalContainer.remove()
+    pizzaButton.classList.remove("pressed")
+    puddingButton.classList.remove("pressed")
+    generalContainer = document.createElement("div");
+    generalContainer.classList.add("pizza-menu");
+    document.body.appendChild(generalContainer);
+
+    bevvyButton.classList.add("pressed")
+
+    createArrayCategory("Acqua e bevande",softDrinks);
+    createArrayCategory("Birre",beers);
+    createArrayCategory("Amari",heavyDrinks);
+    createArrayCategory("Caffetteria",coffee);
+}
+
+
+function createPuddingMenu(){
+    
+    let generalContainer = document.querySelector(".pizza-menu");
+    generalContainer.remove()
+
+    pizzaButton.classList.remove("pressed")
+    bevvyButton.classList.remove("pressed")
+
+    generalContainer = document.createElement("div");
+    generalContainer.classList.add("pizza-menu");
+    document.body.appendChild(generalContainer);
+
+    puddingButton.classList.add("pressed")
+
+    createArrayCategory("Dolci",puddings);
+}
+
+
+// beverages
+let softDrinks = ['Acqua Naturale', 'Acqua Frizzante', 'Coca-cola','Tè alla pesca'];
+let beers = ['Heineken','Ichnusa Radler'];
+let heavyDrinks = ['Nonno Elogu', 'Limoncello','Crema di limone','Mirto'];
+let coffee = ['Espresso','Decaffeinato'];
 
 // pudding
 let puddings = ['Crostata di frutta', 'Tiramisù di fragole', 'Tiramisù','Gelato'];
-createArrayCategory("Dolci",puddings);
+
+// queries
+
+let pizzaButton = document.querySelector("#nav-pizza");
+let bevvyButton = document.querySelector("#nav-bevvy");
+let puddingButton = document.querySelector("#nav-pudding")
+
+
+// creates the div that is then updated with the specific menu
+let generalContainer = document.createElement("div");
+generalContainer.classList.add("pizza-menu");
+generalContainer.classList.add("transparent")
+document.body.appendChild(generalContainer);
+
+
+
+// pizza button 
+pizzaButton.addEventListener("click", createPizzaMenu);
+
+// bevvy button
+bevvyButton.addEventListener("click", createBevvyMenu);
+
+// pudding button
+puddingButton.addEventListener("click", createPuddingMenu);
