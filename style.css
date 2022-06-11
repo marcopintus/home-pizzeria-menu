@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    background-image: url("./pizza_background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 99%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Verdana, Helvetica, sans-serif;
+    flex: 1 1 auto;
+  }
+  .greetings{
+    background-color: rgba(240, 255, 255, 0.92);
+    color: rgb(59, 59, 59);
+    width: 80%;
+    height: 400px;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin: 100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-bar{
+    background-color: rgba(240, 255, 255, 0.92);
+    color: rgb(59, 59, 59);
+    width: 80%;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+  li{
+    padding: 8px;
+    text-align: center;
+  }
+
+  li:hover{
+    background-color: rgb(59, 59, 59);
+    color: rgba(240, 255, 255);
+    border-radius: 8px;
+
+  }
+
+  .pizza-menu{
+    margin: 20px;
+    padding: 20px;
+    padding-top: 16px;
+    background-color: rgba(240, 255, 255, 0.92);
+    color: rgb(59, 59, 59);
+    width: 80%;
+  }
+
+  .pizza-type{
+    border-top: 2px solid rgb(59, 59, 59);
+    border-bottom: 2px solid rgb(59, 59, 59);
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  .pizzas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .pizza{
+    border: 2px solid rgb(59, 59, 59);
+    padding: 20px;
+    flex: 1 1 auto;
+    width: 400px;
+    height: 100px;
+    
+  }
+
+  .pizza-name{
+    font-size: 22px;
+    font-weight: 500;
+  }
