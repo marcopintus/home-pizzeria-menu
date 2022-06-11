@@ -128,3 +128,15 @@ body {
   .transparent{
     background-color: rgba(240, 255, 255, 0.0);
   }
+
+  @media only screen and (max-width: 800px) {
+    body {
+      width: device-width ;
+      zoom: 0.6 ;
+    }
+  }
+
+  @viewport {
+    width: device-width ;
+    zoom: 0.6 ;
+  }
