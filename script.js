@@ -1,4 +1,4 @@
-
+// pizzas
 let classicPizzas = {
     focaccia:{
         name: "Focaccia",
@@ -105,8 +105,6 @@ let ourPizzas = {
     }
 };
 
-let softDrinks = ['Acqua Naturale', 'Acqua Frizzante', 'Coca-cola','Tè alla pesca','Heineken'];
-
 
 function createPizzaCategory(pizzaCategory,pizzas){
 
@@ -147,6 +145,50 @@ function createPizzaCategory(pizzaCategory,pizzas){
 }
 
 
+let generalContainer = document.createElement("div");
+generalContainer.classList.add("pizza-menu");
+document.body.appendChild(generalContainer);
+
 createPizzaCategory("Pizze Classiche",classicPizzas)
 createPizzaCategory("Pizze della casa",ourPizzas)
 
+
+
+// beverages
+let softDrinks = ['Acqua Naturale', 'Acqua Frizzante', 'Coca-cola','Tè alla pesca'];
+let beers = ['Heineken','Ichnusa Radler'];
+let heavyDrinks = ['Nonno Elogu', 'Limoncello','Crema di limone','Mirto'];
+let coffee = ['Espresso','Ginseng','Decaffeinato'];
+
+function createArrayCategory(categoryName,array){
+
+    let pizzaMenu = document.querySelector(".pizza-menu");
+    let category = document.createElement("div");
+    category.classList.add("pizza-type");
+    category.textContent = categoryName;
+    pizzaMenu.appendChild(category);
+
+    let bevvyContainer = document.createElement("div");
+    bevvyContainer.classList.add("bev-pud-s");
+    pizzaMenu.appendChild(bevvyContainer);
+
+    for(let i=0; i<array.length; i++){
+        let bev = document.createElement("div");
+        bev.classList.add("bev-pud");
+        bevvyContainer.appendChild(bev);
+
+        let bevName = document.createElement("p");
+        bevName.classList.add("bev-pud-name");
+        bevName.textContent = array[i];
+        bev.appendChild(bevName)
+    }
+}
+
+createArrayCategory("Acqua e bevande",softDrinks);
+createArrayCategory("Birre",beers);
+createArrayCategory("Amari",heavyDrinks);
+createArrayCategory("Caffetteria",coffee);
+
+// pudding
+let puddings = ['Crostata di frutta', 'Tiramisù di fragole', 'Tiramisù','Gelato'];
+createArrayCategory("Dolci",puddings);
