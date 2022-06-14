@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Allura');
+
 body {
     background-color: rgb(59, 59, 59);
     color: white;
@@ -25,9 +27,31 @@ body {
     margin: 100px;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .logo{
+    border: 5px solid gray;
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    padding: 20px;
+    margin: 40px;
+    background-color: aquamarine;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  .title{
+    font-family: Allura;
+    margin: 24px;
+    font-size: 72px;
+  }
+
 
   .nav-bar{
     background-color: rgba(240, 255, 255, 0.92);
