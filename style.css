@@ -35,21 +35,23 @@ body {
 
   .logo{
     border: 5px solid gray;
-    height: 120px;
-    width: 120px;
-    border-radius: 120px;
-    padding: 20px;
-    margin: 40px;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    padding: 0px;
+    margin: 30px;
     background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 32px;
+    flex: 1 1 auto;
   }
 
   .title{
     font-family: Allura;
     margin: 24px;
-    font-size: 72px;
+    font-size: 64px;
   }
 
 
