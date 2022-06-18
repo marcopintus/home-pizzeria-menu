@@ -34,18 +34,27 @@ body {
   }
 
   .logo{
-    border: 5px solid gray;
-    height: 200px;
-    width: 200px;
-    border-radius: 200px;
+    
+    height: 220px;
+    width: 220px;
+    border-radius: 220px;
     padding: 0px;
     margin: 30px;
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 32px;
     flex: 1 1 auto;
+  }
+
+  .logo-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 5px solid rgb(59, 59, 59);
+    
+
   }
 
   .title{
@@ -79,6 +88,8 @@ body {
   li{
     padding: 8px;
     text-align: center;
+    border: 2px solid rgb(59, 59, 59);
+    border-radius: 8px;
   }
 
   li:hover{

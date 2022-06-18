@@ -143,6 +143,50 @@ function createPizzaCategory(pizzaCategory,pizzas){
     }
 }
 
+let todayPizzas = {
+    margheritaSaporita:{
+        name: "Margherita saporita",
+        ingredients: "Pomodoro, mozzarella, casizolu",
+        price: "0 €",
+    },
+    rucolaGrana:{
+        name: "Rucola e grana",
+        ingredients: "Pomodoro, mozzarella, rucola, grana",
+        price: "0 €"
+    },
+    quattroFormaggi:{
+        name:"Quattro frmaggi",
+        ingredients: "Mozzarella, casizolu, gorgonzola, grana",
+        price: "0 €"
+    },
+    quattroFormaggiR:{
+        name:"Quattro formaggi base margherita",
+        ingredients: "Pomodoro, mozzarella, casizolu, gorgonzola, grana",
+        price: "0 €"
+    },
+    wurstelPatate:{
+        name:"Wurstel e patate",
+        ingredients: "Pomodoro, mozzarella, wurstel, patate",
+        price: "0 €"
+    },
+    patateSalsiccia:{
+        name: "Salsiccia e patate",
+        ingredients: "Pomodoro, mozzarella, salsiccia, patate",
+        price: "0 €"
+    },
+    patatePancetta:{
+        name: "Pancetta e patate",
+        ingredients: "Pomodoro, mozzarella, salsiccia, patate",
+        price: "0 €"
+    },
+    uovoRosso:{
+        name:"Uovo rosso",
+        ingredients: "Pomodor, uovo",
+        price: "0 €"
+    }
+
+};
+
 function createPizzaMenu(){
     
     let generalContainer = document.querySelector(".pizza-menu")
@@ -154,9 +198,10 @@ function createPizzaMenu(){
     document.body.appendChild(generalContainer);
 
     pizzaButton.classList.add("pressed")
-
+    /*
     createPizzaCategory("Pizze Classiche",classicPizzas)
-    createPizzaCategory("Pizze della casa",ourPizzas)
+    createPizzaCategory("Pizze della casa",ourPizzas)*/
+    createPizzaCategory("Pizze del giorno", todayPizzas)
 }
 
 function createArrayCategory(categoryName,array){
@@ -224,11 +269,12 @@ function createPuddingMenu(){
 // beverages
 let softDrinks = ['Acqua Naturale', 'Acqua Frizzante', 'Coca-cola','Tè alla pesca'];
 let beers = ['Heineken','Ichnusa Radler'];
-let heavyDrinks = ['Nonno Elogu', 'Limoncello','Crema di limone','Mirto'];
+let heavyDrinks = ['Nonno Elogu', 'Limoncello','Crema di limone','Mirto',"Filu 'e ferru"];
 let coffee = ['Espresso','Decaffeinato'];
 
 // pudding
-let puddings = ['Crostata di frutta', 'Tiramisù di fragole', 'Tiramisù','Gelato'];
+// let puddings = ['Crostata di frutta', 'Tiramisù di fragole', 'Tiramisù','Gelato'];
+let puddings = ['Gelato'];
 
 // queries
 
